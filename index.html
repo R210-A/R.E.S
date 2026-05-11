@@ -1,0 +1,549 @@
+<header class="brand-header">
+  <div class="brand-tag">SCHOOL CAMPAIGN</div>
+
+<div class="brand-header">
+  <div class="brand-glow"></div>
+  <h1 class="brand-title">R.E.S</h1>
+  <p class="brand-sub">Reduce • Educate • Sustain</p>
+</div>
+
+  <div class="brand-line"></div>
+</header>
+<div class="bg-ambient"></div>
+<div class="bg-ambient-2"></div>
+<div class="grid-bg"></div>
+<div class="bg-container">
+  <div class="bg bg-awareness"></div>
+  <div class="bg bg-realization"></div>
+  <div class="bg bg-crisis"></div>
+  <div class="bg bg-action"></div>
+</div>
+
+<nav>
+  <div class="logo">R.E.S</div>
+
+  <ul>
+    <li><a href="#data">Data</a></li>
+    <li><a href="#dampak">Dampak</a></li>
+    <li><a href="#aksi">Aksi</a></li>
+    <li><a href="#statistik">Statistik</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#monitor">Monitor</a>
+    <li><a href="#quiz">Quiz</a></li>
+    <li><a href="#game">Game</a></li>
+    </li>
+    <li><a href="#inventor">Tim</a></li>
+  </ul>
+</nav>
+<div class="blobs">
+  <div></div>
+  <div></div>
+</div>
+<div class="floating-shapes">
+  <span>🍃</span>
+  <span>🍃</span>
+  <span>🍃</span>
+  <span>🍃</span>
+  <span>🍃</span>
+  <span>🍃</span>
+</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-container hidden">
+
+    <div class="hero-left">
+
+      <div class="badge">🌍 Kampanye Pengendalian Sosial</div>
+
+      <h1>INDONESIA<br>DARURAT<br>SAMPAH</h1>
+
+      <div class="typing" id="typing"></div>
+
+      <div class="hero-buttons">
+        <a href="#data" class="btn btn-primary">Lihat Fakta</a>
+        <a href="#aksi" class="btn btn-secondary">Mulai Peduli</a>
+      </div>
+
+    </div>
+
+    <div class="hero-right">
+      <div class="floating-card">🌊 7,8 Juta Ton Sampah/Tahun</div>
+      <div class="floating-card">⚠️ Indonesia Darurat Plastik</div>
+      <div class="floating-card">🐢 Dampak ke Ekosistem Laut</div>
+    </div>
+
+  </div>
+</section>
+<!-- APA ITU SAMPAH -->
+<section id="pengantar" class="hidden intro-section">
+
+  <div class="intro-box">
+
+    <div class="intro-tag">🌱 Awal dari Semua Masalah</div>
+
+    <h2>Apa Itu Sampah Sebenarnya?</h2>
+
+    <p class="fade-line">
+      Kita sering menganggap sampah adalah “akhir”.
+    </p>
+
+    <p class="fade-line">
+      Padahal, itu bukan akhir.
+      Itu hanya <span class="highlight-text">awal dari perjalanan baru yang kita tidak lihat</span>.
+    </p>
+
+    <p class="fade-line">
+      Botol plastik yang kamu buang hari ini…
+      mungkin akan tetap ada <b>puluhan hingga ratusan tahun</b> lagi.
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="fade-line">
+      Sampah bukan hilang.
+      Ia berpindah — ke sungai, tanah, laut, bahkan tubuh makhluk hidup.
+    </p>
+
+    <p class="highlight-final">
+      Dan masalahnya dimulai ketika kita berhenti peduli karena “hanya satu”.
+    </p>
+
+  </div>
+
+</section>
+<!-- DATA -->
+<section id="data" class="hidden">
+  <div class="section-title">
+    <h2>Fakta Sampah Indonesia</h2>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h1>7,8 Juta</h1><h3>Ton Plastik/Tahun</h3></div>
+    <div class="card"><h1>346 Ribu</h1><h3>Ton ke Laut</h3></div>
+    <div class="card"><h1>4,9 Juta</h1><h3>Ton Tidak Terkelola</h3></div>
+    <div class="card"><h1>41%</h1><h3>Sungai Tercemar</h3></div>
+  </div>
+</section>
+
+<!-- DATA PEMBANDING -->
+<!-- COMPARISON -->
+<section id="comparison" class="hidden">
+
+  <div class="section-title">
+    <h2>Indonesia vs Dunia</h2>
+    <p>Perbandingan kondisi sampah global</p>
+  </div>
+
+  <div class="compare-wrapper">
+
+    <!-- INDONESIA -->
+    <div class="compare-card indo">
+      <h3>🇮🇩 Indonesia</h3>
+
+      <div class="big-number">7,8 Juta Ton</div>
+      <p>Sampah plastik per tahun</p>
+
+      <div class="bar">
+        <div class="fill indo-fill"></div>
+      </div>
+
+      <small>Sekitar 56% tidak terkelola dengan baik</small>
+    </div>
+
+    <!-- DUNIA -->
+    <div class="compare-card world">
+      <h3>🌍 Dunia</h3>
+
+      <div class="big-number">300+ Juta Ton</div>
+      <p>Sampah plastik per tahun</p>
+
+      <div class="bar">
+        <div class="fill world-fill"></div>
+      </div>
+
+      <small>Mayoritas berasal dari negara berkembang & industri</small>
+    </div>
+
+  </div>
+
+</section>
+<!-- PENYEBAB -->
+<div class="story-box">
+
+  <h2>Semua Berawal Dari Hal Kecil</h2>
+
+  <p>
+    Kamu membuang satu botol plastik karena merasa itu tidak penting.
+  </p>
+
+  <p>
+    Tapi jutaan orang melakukan hal yang sama setiap hari.
+  </p>
+
+  <p class="highlight">
+    Dari “hanya satu”, lahirlah masalah besar yang kita lihat sekarang.
+  </p>
+
+</div>
+<section id="rantai" class="hidden">
+
+  <div class="section-title">
+    <h2>Bagaimana Masalah Ini Terjadi</h2>
+    <p>Urutan sederhana yang sering kita abaikan</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>1. Kebiasaan Kecil</h3>
+      <p>Membuang sampah tanpa berpikir panjang.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Terakumulasi</h3>
+      <p>Sampah terus menumpuk di lingkungan sekitar.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Sistem Terganggu</h3>
+      <p>Saluran air tersumbat dan lingkungan menjadi tidak sehat.</p>
+    </div>
+
+    <div class="card">
+      <h3>4. Dampak Nyata</h3>
+      <p>Banjir, penyakit, dan penurunan kualitas hidup.</p>
+    </div>
+
+    <div class="card">
+      <h3>5. Dampak Besar</h3>
+      <p>Kerugian ekonomi dan kerusakan lingkungan jangka panjang.</p>
+    </div>
+
+  </div>
+
+</section>
+<!-- DAMPAK -->
+<section id="dampak" class="hidden">
+  <div class="section-title"><h2>Dampak Sampah</h2></div>
+
+  <div class="grid">
+    <div class="card"><div class="emoji">🌊</div><h3>Banjir</h3></div>
+    <div class="card"><div class="emoji">🦠</div><h3>Penyakit</h3></div>
+    <div class="card"><div class="emoji">🐢</div><h3>Hewan Mati</h3></div>
+    <div class="card"><div class="emoji">🌫️</div><h3>Polusi</h3></div>
+    <div class="card"><div class="emoji">🌱</div><h3>Tanah Rusak</h3></div>
+    <div class="card"><div class="emoji">🔥</div><h3>Iklim</h3></div>
+  </div>
+</section>
+
+<!-- DARURAT -->
+<section class="hidden">
+  <div class="danger-box">
+    <h2>⚠️ INDONESIA DARURAT SAMPAH</h2>
+    <p>Perubahan harus dimulai sekarang sebelum terlambat.</p>
+  </div>
+</section>
+
+<!-- AKSI -->
+<section id="aksi" class="hidden">
+  <div class="section-title">
+    <h2>Aksi Pengendalian Sosial</h2>
+  </div>
+
+  <p class="action-hook">
+    Mulai dari 1 kebiasaan kecil. Jika dilakukan bersama, dampaknya besar.
+  </p>
+
+  <div class="grid">
+    <div class="card">🗑️ <span>Buang Sampah Benar</span></div>
+    <div class="card">♻️ <span>Daur Ulang</span></div>
+    <div class="card">🧹 <span>Kerja Bakti</span></div>
+    <div class="card">🥤 <span>Kurangi Plastik</span></div>
+    <div class="card">🛍️ <span>Tas Kain</span></div>
+    <div class="card">📢 <span>Edukasi</span></div>
+  </div>
+</section>
+
+<!-- STATISTIK -->
+<section id="statistik" class="hidden">
+  <div class="section-title"><h2>Statistik</h2></div>
+
+  <div class="stats-container">
+    <div class="stats-item">
+      <p>Sungai Bersih 41%</p>
+      <div class="progress"><div class="fill fill1"></div></div>
+    </div>
+
+    <div class="stats-item">
+      <p>Pengelolaan 35%</p>
+      <div class="progress"><div class="fill fill2"></div></div>
+    </div>
+
+    <div class="stats-item">
+      <p>Kesadaran 52%</p>
+      <div class="progress"><div class="fill fill3"></div></div>
+    </div>
+  </div>
+</section>
+<!-- DIAGRAM -->
+<section id="tren" class="hidden">
+
+  <div class="section-title">
+    <h2>Tren Sampah Indonesia</h2>
+    <p>2020–2025 (KLHK + proyeksi)</p>
+  </div>
+
+  <div class="bar-chart">
+
+    <div class="bar-item">
+      <div class="bar" data-h="67"></div>
+      <span>2020<br>67 jt</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" data-h="68"></div>
+      <span>2021<br>68 jt</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" data-h="70"></div>
+      <span>2022<br>70 jt</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" data-h="72"></div>
+      <span>2023<br>72 jt</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" data-h="73"></div>
+      <span>2024<br>73 jt</span>
+    </div>
+
+    <div class="bar-item">
+      <div class="bar" data-h="75"></div>
+      <span>2025<br>75 jt</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="hidden">
+
+  <div class="section-title">
+    <h2>Jika Kita Terus Diam...</h2>
+    <p>Masa depan lingkungan Indonesia</p>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="year">2026</div>
+      <div class="timeline-content">
+        Sungai semakin dipenuhi sampah plastik.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2030</div>
+      <div class="timeline-content">
+        Risiko banjir meningkat akibat saluran tersumbat.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2040</div>
+      <div class="timeline-content">
+        Laut Indonesia semakin tercemar mikroplastik.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2050</div>
+      <div class="timeline-content">
+        Hewan laut dan ekosistem semakin terancam.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MONITOR -->
+<div id="monitor" class="monitor-box">
+
+  <div class="monitor-label">Tingkat Dampak Lingkungan</div>
+
+  <h1 id="monitorValue">0%</h1>
+
+  <div class="monitor-bar">
+    <div class="monitor-fill"></div>
+  </div>
+
+  <div class="monitor-desc">
+    Data menunjukkan peningkatan dampak akibat sampah yang tidak terkelola dengan baik.
+  </div>
+
+</div>
+
+<!-- QUIZ -->
+<section id="quiz" class="hidden">
+
+  <div class="section-title">
+    <h2>Quiz Edukasi Sampah</h2>
+    <p>Jawab satu per satu dan uji pemahamanmu</p>
+  </div>
+
+  <div class="quiz-box">
+
+    <div id="progress">Soal 1 / 5</div>
+
+    <div id="question" class="quiz-question"></div>
+
+    <div id="options" class="quiz-options"></div>
+
+    <div id="feedback"></div>
+
+    <button id="nextBtn" style="display:none;">Soal Berikutnya</button>
+
+    <div class="score">
+      Skor: <span id="quizScore">0</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GAME -->
+
+<section id="game" class="hidden">
+
+  <div class="section-title">
+    <h2>Mini Game Pilah Sampah</h2>
+    <p>Masukkan sampah ke tempat yang benar</p>
+  </div>
+
+  <div class="game-area">
+
+    <div class="trash organik" draggable="true" style="top:40px;left:60px;">🍌</div>
+
+    <div class="trash organik" draggable="true" style="top:150px;left:180px;">🍃</div>
+
+    <div class="trash organik" draggable="true" style="top:280px;left:120px;">🍎</div>
+
+    <div class="trash anorganik" draggable="true" style="top:90px;left:520px;">🧴</div>
+
+    <div class="trash anorganik" draggable="true" style="top:220px;left:650px;">🥤</div>
+
+    <div class="trash anorganik" draggable="true" style="top:340px;left:450px;">🥫</div>
+
+    <div class="bin organik-bin" id="organikBin">
+      🟢
+      <span>Organik</span>
+    </div>
+
+    <div class="bin anorganik-bin" id="anorganikBin">
+      🔵
+      <span>Anorganik</span>
+    </div>
+
+  </div>
+
+  <div class="score">
+    Skor: <span id="score">0</span>
+  </div>
+
+</section>
+
+<section id="uu" class="hidden">
+
+  <div class="section-title">
+    <h2>Dasar Hukum & Sanksi</h2>
+    <p>Pengendalian sampah di Indonesia diatur dalam hukum resmi</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- UU -->
+    <div class="card">
+      <h3>UU No. 18 Tahun 2008</h3>
+      <p>
+        Tentang Pengelolaan Sampah. Mengatur kewajiban setiap warga dalam menjaga dan mengelola sampah secara bertanggung jawab.
+      </p>
+    </div>
+
+    <!-- PASAL -->
+    <div class="card">
+      <h3>Pasal 29</h3>
+      <p>
+        Setiap orang dilarang membuang sampah tidak pada tempat yang telah ditentukan atau disediakan.
+      </p>
+    </div>
+
+    <!-- SANKSI ADMIN -->
+    <div class="card">
+      <h3>Sanksi Administratif</h3>
+      <p>
+        Teguran tertulis, paksaan pemerintah daerah, hingga denda administratif bagi pelanggar.
+      </p>
+    </div>
+
+    <!-- SANKSI PERDATA -->
+    <div class="card">
+      <h3>Sanksi Perdata</h3>
+      <p>
+        Pelaku dapat diminta mengganti kerugian akibat kerusakan lingkungan yang ditimbulkan.
+      </p>
+    </div>
+
+    <!-- SANKSI PIDANA -->
+    <div class="card">
+      <h3>Sanksi Pidana</h3>
+      <p>
+        Berdasarkan UU No. 18 Tahun 2008, pelanggar dapat dikenai denda dan/atau pidana kurungan sesuai keputusan pengadilan.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+<!-- INVENTOR -->
+<section id="inventor" class="hidden">
+
+  <div class="section-title">
+    <h2>Tim Pengembang</h2>
+    <p>Kolaborasi setara dalam kampanye pengendalian sosial</p>
+  </div>
+
+  <div class="inventor-box">
+
+    <div class="inventor-card">
+      <div class="avatar">AJ</div>
+      <h3>Abdurrafi Jerryco</h3>
+      <p>Konsep & Ide Kampanye</p>
+    </div>
+
+    <div class="inventor-card">
+      <div class="avatar">AR</div>
+      <h3>Aldeandra Rasya</h3>
+      <p>Desain & Tampilan Web</p>
+    </div>
+
+    <div class="inventor-card">
+      <div class="avatar">CA</div>
+      <h3>Cahyo Jatmiko</h3>
+      <p>Data & Materi Edukasi</p>
+    </div>
+
+    <div class="inventor-card">
+      <div class="avatar">MA</div>
+      <h3>Muhammad Abimanyu</h3>
+      <p>Pengembangan & Interaksi</p>
+    </div>
+
+  </div>
+
+</section>
