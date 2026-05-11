@@ -1,549 +1,1306 @@
-<header class="brand-header">
-  <div class="brand-tag">SCHOOL CAMPAIGN</div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<div class="brand-header">
-  <div class="brand-glow"></div>
-  <h1 class="brand-title">R.E.S</h1>
-  <p class="brand-sub">Reduce • Educate • Sustain</p>
-</div>
+<title>R.E.S - Reduce Educate Sustain</title>
 
-  <div class="brand-line"></div>
-</header>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--main:#00d4ff;
+--accent:#00ffa3;
+--danger:#ff4d4d;
+--dark:#050816;
+}
+
+body{
+font-family:'Outfit',sans-serif;
+background:linear-gradient(-45deg,#050816,#0b1a2e,#1a0f2b,#061c1a);
+background-size:400% 400%;
+animation:gradientMove 18s ease infinite;
+color:white;
+overflow-x:hidden;
+line-height:1.7;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* BACKGROUND */
+.grid-bg{
+position:fixed;
+inset:0;
+background-image:
+linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+background-size:40px 40px;
+z-index:-3;
+}
+
+.bg-ambient,
+.bg-ambient-2{
+position:fixed;
+inset:0;
+z-index:-2;
+pointer-events:none;
+}
+
+.bg-ambient::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,rgba(0,212,255,0.12),transparent 60%);
+top:-100px;
+left:-150px;
+animation:floatMove 12s ease-in-out infinite;
+}
+
+.bg-ambient-2::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(0,255,163,0.08),transparent 60%);
+bottom:-120px;
+right:-120px;
+animation:floatMove2 16s ease-in-out infinite;
+}
+
+@keyframes floatMove{
+0%{transform:translate(0,0);}
+50%{transform:translate(80px,60px);}
+100%{transform:translate(0,0);}
+}
+
+@keyframes floatMove2{
+0%{transform:translate(0,0);}
+50%{transform:translate(-70px,-50px);}
+100%{transform:translate(0,0);}
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(14px);
+border-radius:22px;
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+background:linear-gradient(to right,#00d9ff,#9dffea);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+gap:14px;
+list-style:none;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+text-decoration:none;
+color:#d8d8d8;
+font-size:14px;
+padding:6px 10px;
+border-radius:10px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.08);
+color:#00e0ff;
+}
+
+/* BRAND */
+.brand-header{
+text-align:center;
+padding:150px 20px 80px;
+position:relative;
+}
+
+.brand-tag{
+display:inline-block;
+padding:6px 14px;
+font-size:12px;
+letter-spacing:2px;
+color:#00d4ff;
+border:1px solid rgba(0,212,255,0.3);
+border-radius:50px;
+background:rgba(0,212,255,0.05);
+backdrop-filter:blur(10px);
+margin-bottom:18px;
+}
+
+.brand-title{
+font-size:90px;
+font-weight:900;
+letter-spacing:6px;
+background:linear-gradient(90deg,#ffffff,#00d4ff,#00ffa3);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.brand-sub{
+margin-top:10px;
+font-size:18px;
+color:#cfcfcf;
+letter-spacing:2px;
+}
+
+.brand-line{
+width:120px;
+height:4px;
+margin:25px auto 0;
+border-radius:20px;
+background:linear-gradient(to right,#00d4ff,#00ffa3);
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 8% 100px;
+}
+
+.hero-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+width:100%;
+}
+
+.hero-left{
+flex:1;
+}
+
+.hero-right{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.badge{
+display:inline-block;
+padding:10px 20px;
+border-radius:50px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+margin-bottom:25px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:95px;
+line-height:0.95;
+font-weight:800;
+background:linear-gradient(to right,#ffffff,#8cecff,#00d4ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.typing{
+font-size:20px;
+color:#cfcfcf;
+margin:25px 0;
+min-height:40px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:60px;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#00d4ff,#00ffa3);
+color:#041018;
+}
+
+.btn-secondary{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+color:white;
+}
+
+.floating-card{
+padding:16px 18px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+font-size:14px;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+/* SECTION */
+section{
+padding:75px 9%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:32px;
+}
+
+.section-title h2{
+font-size:52px;
+font-weight:800;
+background:linear-gradient(to right,#fff,#9cecff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.section-title p{
+color:#cfcfcf;
+margin-top:8px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.045);
+padding:30px;
+border-radius:22px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00d4ff;
+}
+
+.card h1{
+font-size:48px;
+color:#8cecff;
+margin-bottom:10px;
+}
+
+/* STORY */
+.story-box{
+max-width:800px;
+padding:40px;
+margin:auto;
+border-left:5px solid #00d4ff;
+background:rgba(255,255,255,0.03);
+border-radius:20px;
+line-height:2;
+}
+
+.story-box h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.story-box p{
+margin-bottom:15px;
+font-size:18px;
+opacity:0.85;
+}
+
+.highlight{
+font-size:20px;
+color:#00d4ff;
+font-weight:600;
+}
+
+/* COMPARISON */
+.compare-wrapper{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.compare-card{
+flex:1;
+min-width:300px;
+padding:30px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+}
+
+.big-number{
+font-size:34px;
+font-weight:800;
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+.bar{
+height:14px;
+background:rgba(255,255,255,0.08);
+border-radius:20px;
+overflow:hidden;
+margin:15px 0;
+}
+
+.fill{
+height:100%;
+width:0;
+transition:2s ease;
+}
+
+.indo-fill{
+background:linear-gradient(90deg,#00d4ff,#00ffa3);
+width:65%;
+}
+
+.world-fill{
+background:linear-gradient(90deg,#ff4d4d,#ffb703);
+width:100%;
+}
+
+/* DAMPAK */
+#dampak .card{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+gap:10px;
+}
+
+.emoji{
+font-size:48px;
+}
+
+/* DANGER */
+.danger-box{
+padding:60px;
+border-radius:30px;
+text-align:center;
+background:linear-gradient(135deg,#5a1515,#7a2b2b);
+}
+
+/* STAT */
+.stats-container{
+max-width:800px;
+margin:auto;
+}
+
+.progress{
+height:22px;
+background:rgba(255,255,255,0.06);
+border-radius:40px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.fill1{background:#00d4ff;}
+.fill2{background:#ff6b6b;}
+.fill3{background:#ffd166;}
+
+/* MONITOR */
+.monitor-box{
+text-align:center;
+padding:50px;
+margin:60px auto;
+max-width:900px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+}
+
+.monitor-box h1{
+font-size:72px;
+background:linear-gradient(to right,#ff4d4d,#ffb703);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.monitor-bar{
+height:25px;
+background:rgba(255,255,255,0.08);
+border-radius:50px;
+overflow:hidden;
+margin:20px 0;
+}
+
+.monitor-fill{
+width:0%;
+height:100%;
+background:linear-gradient(to right,#ff4d4d,#ffb703);
+transition:width 0.08s linear;
+}
+
+/* TIMELINE */
+.timeline{
+max-width:900px;
+margin:auto;
+position:relative;
+}
+
+.timeline::before{
+content:'';
+position:absolute;
+left:50%;
+top:0;
+width:4px;
+height:100%;
+background:linear-gradient(#00ffcc,#00a2ff);
+transform:translateX(-50%);
+}
+
+.timeline-item{
+display:flex;
+justify-content:flex-start;
+margin-bottom:50px;
+position:relative;
+}
+
+.timeline-item:nth-child(even){
+justify-content:flex-end;
+}
+
+.timeline-content{
+width:40%;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.year{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+background:#00ffcc;
+color:#000;
+padding:10px 20px;
+border-radius:50px;
+font-weight:700;
+}
+
+/* GAME */
+.game-area{
+position:relative;
+height:500px;
+border-radius:35px;
+background:rgba(255,255,255,0.05);
+border:2px dashed rgba(255,255,255,0.12);
+overflow:hidden;
+}
+
+.trash{
+position:absolute;
+font-size:45px;
+cursor:grab;
+}
+
+.bin{
+position:absolute;
+bottom:20px;
+width:150px;
+height:150px;
+border-radius:25px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-size:55px;
+font-weight:700;
+}
+
+.organik-bin{
+left:20px;
+background:linear-gradient(135deg,#00c853,#43e97b);
+}
+
+.anorganik-bin{
+right:20px;
+background:linear-gradient(135deg,#008cff,#00c6ff);
+}
+
+.score{
+margin-top:20px;
+text-align:center;
+font-size:22px;
+}
+
+/* QUIZ */
+.quiz-box{
+max-width:700px;
+margin:auto;
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+text-align:center;
+}
+
+.quiz-question{
+font-size:22px;
+margin:25px 0;
+font-weight:600;
+}
+
+.quiz-options{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.quiz-options button,
+#nextBtn{
+padding:14px;
+border:none;
+border-radius:12px;
+background:rgba(255,255,255,0.07);
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.quiz-options button:hover,
+#nextBtn:hover{
+background:#00d4ff;
+color:#041018;
+}
+
+/* TEAM */
+.inventor-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.inventor-card{
+background:rgba(255,255,255,0.05);
+padding:26px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.avatar{
+width:60px;
+height:60px;
+margin:0 auto 12px;
+border-radius:50%;
+background:linear-gradient(135deg,#00d4ff,#00ffa3);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:800;
+color:#041018;
+}
+
+/* ANIMATION */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:0.8s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.hero h1{
+font-size:72px;
+}
+
+.brand-title{
+font-size:70px;
+}
+}
+
+@media(max-width:768px){
+
+nav{
+padding:14px 16px;
+}
+
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.brand-title{
+font-size:52px;
+}
+
+.section-title h2{
+font-size:36px;
+}
+
+.timeline::before{
+left:20px;
+}
+
+.timeline-item,
+.timeline-item:nth-child(even){
+justify-content:flex-start;
+padding-left:50px;
+}
+
+.timeline-content{
+width:100%;
+}
+
+.year{
+left:20px;
+transform:none;
+}
+
+.game-area{
+height:650px;
+}
+
+.bin{
+width:120px;
+height:120px;
+font-size:40px;
+}
+
+nav ul{
+gap:6px;
+}
+
+nav a{
+font-size:12px;
+}
+}
+
+@media(max-width:480px){
+
+.brand-title{
+font-size:42px;
+letter-spacing:2px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.card{
+padding:20px;
+}
+
+.card h1{
+font-size:36px;
+}
+
+.monitor-box h1{
+font-size:54px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="grid-bg"></div>
 <div class="bg-ambient"></div>
 <div class="bg-ambient-2"></div>
-<div class="grid-bg"></div>
-<div class="bg-container">
-  <div class="bg bg-awareness"></div>
-  <div class="bg bg-realization"></div>
-  <div class="bg bg-crisis"></div>
-  <div class="bg bg-action"></div>
-</div>
 
 <nav>
-  <div class="logo">R.E.S</div>
+<div class="logo">R.E.S</div>
 
-  <ul>
-    <li><a href="#data">Data</a></li>
-    <li><a href="#dampak">Dampak</a></li>
-    <li><a href="#aksi">Aksi</a></li>
-    <li><a href="#statistik">Statistik</a></li>
-    <li><a href="#timeline">Timeline</a></li>
-    <li><a href="#monitor">Monitor</a>
-    <li><a href="#quiz">Quiz</a></li>
-    <li><a href="#game">Game</a></li>
-    </li>
-    <li><a href="#inventor">Tim</a></li>
-  </ul>
+<ul>
+<li><a href="#data">Data</a></li>
+<li><a href="#dampak">Dampak</a></li>
+<li><a href="#aksi">Aksi</a></li>
+<li><a href="#timeline">Timeline</a></li>
+<li><a href="#quiz">Quiz</a></li>
+<li><a href="#game">Game</a></li>
+<li><a href="#inventor">Tim</a></li>
+</ul>
 </nav>
-<div class="blobs">
-  <div></div>
-  <div></div>
-</div>
-<div class="floating-shapes">
-  <span>🍃</span>
-  <span>🍃</span>
-  <span>🍃</span>
-  <span>🍃</span>
-  <span>🍃</span>
-  <span>🍃</span>
-</div>
-<!-- HERO -->
+
+<header class="brand-header">
+<div class="brand-tag">SCHOOL CAMPAIGN</div>
+<h1 class="brand-title">R.E.S</h1>
+<p class="brand-sub">Reduce • Educate • Sustain</p>
+<div class="brand-line"></div>
+</header>
+
 <section class="hero">
-  <div class="hero-container hidden">
+<div class="hero-container hidden">
 
-    <div class="hero-left">
+<div class="hero-left">
+<div class="badge">🌍 Kampanye Pengendalian Sosial</div>
 
-      <div class="badge">🌍 Kampanye Pengendalian Sosial</div>
+<h1>INDONESIA<br>DARURAT<br>SAMPAH</h1>
 
-      <h1>INDONESIA<br>DARURAT<br>SAMPAH</h1>
+<div class="typing" id="typing"></div>
 
-      <div class="typing" id="typing"></div>
+<div class="hero-buttons">
+<a href="#data" class="btn btn-primary">Lihat Fakta</a>
+<a href="#aksi" class="btn btn-secondary">Mulai Peduli</a>
+</div>
+</div>
 
-      <div class="hero-buttons">
-        <a href="#data" class="btn btn-primary">Lihat Fakta</a>
-        <a href="#aksi" class="btn btn-secondary">Mulai Peduli</a>
-      </div>
-
-    </div>
-
-    <div class="hero-right">
-      <div class="floating-card">🌊 7,8 Juta Ton Sampah/Tahun</div>
-      <div class="floating-card">⚠️ Indonesia Darurat Plastik</div>
-      <div class="floating-card">🐢 Dampak ke Ekosistem Laut</div>
-    </div>
-
-  </div>
-</section>
-<!-- APA ITU SAMPAH -->
-<section id="pengantar" class="hidden intro-section">
-
-  <div class="intro-box">
-
-    <div class="intro-tag">🌱 Awal dari Semua Masalah</div>
-
-    <h2>Apa Itu Sampah Sebenarnya?</h2>
-
-    <p class="fade-line">
-      Kita sering menganggap sampah adalah “akhir”.
-    </p>
-
-    <p class="fade-line">
-      Padahal, itu bukan akhir.
-      Itu hanya <span class="highlight-text">awal dari perjalanan baru yang kita tidak lihat</span>.
-    </p>
-
-    <p class="fade-line">
-      Botol plastik yang kamu buang hari ini…
-      mungkin akan tetap ada <b>puluhan hingga ratusan tahun</b> lagi.
-    </p>
-
-    <div class="divider"></div>
-
-    <p class="fade-line">
-      Sampah bukan hilang.
-      Ia berpindah — ke sungai, tanah, laut, bahkan tubuh makhluk hidup.
-    </p>
-
-    <p class="highlight-final">
-      Dan masalahnya dimulai ketika kita berhenti peduli karena “hanya satu”.
-    </p>
-
-  </div>
-
-</section>
-<!-- DATA -->
-<section id="data" class="hidden">
-  <div class="section-title">
-    <h2>Fakta Sampah Indonesia</h2>
-  </div>
-
-  <div class="grid">
-    <div class="card"><h1>7,8 Juta</h1><h3>Ton Plastik/Tahun</h3></div>
-    <div class="card"><h1>346 Ribu</h1><h3>Ton ke Laut</h3></div>
-    <div class="card"><h1>4,9 Juta</h1><h3>Ton Tidak Terkelola</h3></div>
-    <div class="card"><h1>41%</h1><h3>Sungai Tercemar</h3></div>
-  </div>
-</section>
-
-<!-- DATA PEMBANDING -->
-<!-- COMPARISON -->
-<section id="comparison" class="hidden">
-
-  <div class="section-title">
-    <h2>Indonesia vs Dunia</h2>
-    <p>Perbandingan kondisi sampah global</p>
-  </div>
-
-  <div class="compare-wrapper">
-
-    <!-- INDONESIA -->
-    <div class="compare-card indo">
-      <h3>🇮🇩 Indonesia</h3>
-
-      <div class="big-number">7,8 Juta Ton</div>
-      <p>Sampah plastik per tahun</p>
-
-      <div class="bar">
-        <div class="fill indo-fill"></div>
-      </div>
-
-      <small>Sekitar 56% tidak terkelola dengan baik</small>
-    </div>
-
-    <!-- DUNIA -->
-    <div class="compare-card world">
-      <h3>🌍 Dunia</h3>
-
-      <div class="big-number">300+ Juta Ton</div>
-      <p>Sampah plastik per tahun</p>
-
-      <div class="bar">
-        <div class="fill world-fill"></div>
-      </div>
-
-      <small>Mayoritas berasal dari negara berkembang & industri</small>
-    </div>
-
-  </div>
-
-</section>
-<!-- PENYEBAB -->
-<div class="story-box">
-
-  <h2>Semua Berawal Dari Hal Kecil</h2>
-
-  <p>
-    Kamu membuang satu botol plastik karena merasa itu tidak penting.
-  </p>
-
-  <p>
-    Tapi jutaan orang melakukan hal yang sama setiap hari.
-  </p>
-
-  <p class="highlight">
-    Dari “hanya satu”, lahirlah masalah besar yang kita lihat sekarang.
-  </p>
+<div class="hero-right">
+<div class="floating-card">🌊 7,8 Juta Ton Sampah/Tahun</div>
+<div class="floating-card">⚠️ Indonesia Darurat Plastik</div>
+<div class="floating-card">🐢 Dampak ke Ekosistem Laut</div>
+</div>
 
 </div>
-<section id="rantai" class="hidden">
-
-  <div class="section-title">
-    <h2>Bagaimana Masalah Ini Terjadi</h2>
-    <p>Urutan sederhana yang sering kita abaikan</p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>1. Kebiasaan Kecil</h3>
-      <p>Membuang sampah tanpa berpikir panjang.</p>
-    </div>
-
-    <div class="card">
-      <h3>2. Terakumulasi</h3>
-      <p>Sampah terus menumpuk di lingkungan sekitar.</p>
-    </div>
-
-    <div class="card">
-      <h3>3. Sistem Terganggu</h3>
-      <p>Saluran air tersumbat dan lingkungan menjadi tidak sehat.</p>
-    </div>
-
-    <div class="card">
-      <h3>4. Dampak Nyata</h3>
-      <p>Banjir, penyakit, dan penurunan kualitas hidup.</p>
-    </div>
-
-    <div class="card">
-      <h3>5. Dampak Besar</h3>
-      <p>Kerugian ekonomi dan kerusakan lingkungan jangka panjang.</p>
-    </div>
-
-  </div>
-
-</section>
-<!-- DAMPAK -->
-<section id="dampak" class="hidden">
-  <div class="section-title"><h2>Dampak Sampah</h2></div>
-
-  <div class="grid">
-    <div class="card"><div class="emoji">🌊</div><h3>Banjir</h3></div>
-    <div class="card"><div class="emoji">🦠</div><h3>Penyakit</h3></div>
-    <div class="card"><div class="emoji">🐢</div><h3>Hewan Mati</h3></div>
-    <div class="card"><div class="emoji">🌫️</div><h3>Polusi</h3></div>
-    <div class="card"><div class="emoji">🌱</div><h3>Tanah Rusak</h3></div>
-    <div class="card"><div class="emoji">🔥</div><h3>Iklim</h3></div>
-  </div>
 </section>
 
-<!-- DARURAT -->
+<section id="data" class="hidden">
+<div class="section-title">
+<h2>Fakta Sampah Indonesia</h2>
+</div>
+
+<div class="grid">
+<div class="card"><h1>7,8 Juta</h1><h3>Ton Plastik/Tahun</h3></div>
+<div class="card"><h1>346 Ribu</h1><h3>Ton ke Laut</h3></div>
+<div class="card"><h1>4,9 Juta</h1><h3>Ton Tidak Terkelola</h3></div>
+<div class="card"><h1>41%</h1><h3>Sungai Tercemar</h3></div>
+</div>
+</section>
+
 <section class="hidden">
-  <div class="danger-box">
-    <h2>⚠️ INDONESIA DARURAT SAMPAH</h2>
-    <p>Perubahan harus dimulai sekarang sebelum terlambat.</p>
-  </div>
+<div class="story-box">
+<h2>Semua Berawal Dari Hal Kecil</h2>
+
+<p>Kamu membuang satu botol plastik karena merasa itu tidak penting.</p>
+
+<p>Tapi jutaan orang melakukan hal yang sama setiap hari.</p>
+
+<p class="highlight">
+Dari “hanya satu”, lahirlah masalah besar yang kita lihat sekarang.
+</p>
+</div>
 </section>
 
-<!-- AKSI -->
+<section id="dampak" class="hidden">
+<div class="section-title">
+<h2>Dampak Sampah</h2>
+</div>
+
+<div class="grid">
+<div class="card"><div class="emoji">🌊</div><h3>Banjir</h3></div>
+<div class="card"><div class="emoji">🦠</div><h3>Penyakit</h3></div>
+<div class="card"><div class="emoji">🐢</div><h3>Hewan Mati</h3></div>
+<div class="card"><div class="emoji">🌫️</div><h3>Polusi</h3></div>
+<div class="card"><div class="emoji">🌱</div><h3>Tanah Rusak</h3></div>
+<div class="card"><div class="emoji">🔥</div><h3>Iklim</h3></div>
+</div>
+</section>
+
+<section class="hidden">
+<div class="danger-box">
+<h2>⚠️ INDONESIA DARURAT SAMPAH</h2>
+<p>Perubahan harus dimulai sekarang sebelum terlambat.</p>
+</div>
+</section>
+
 <section id="aksi" class="hidden">
-  <div class="section-title">
-    <h2>Aksi Pengendalian Sosial</h2>
-  </div>
+<div class="section-title">
+<h2>Aksi Pengendalian Sosial</h2>
+<p>Mulai dari 1 kebiasaan kecil. Jika dilakukan bersama, dampaknya besar.</p>
+</div>
 
-  <p class="action-hook">
-    Mulai dari 1 kebiasaan kecil. Jika dilakukan bersama, dampaknya besar.
-  </p>
-
-  <div class="grid">
-    <div class="card">🗑️ <span>Buang Sampah Benar</span></div>
-    <div class="card">♻️ <span>Daur Ulang</span></div>
-    <div class="card">🧹 <span>Kerja Bakti</span></div>
-    <div class="card">🥤 <span>Kurangi Plastik</span></div>
-    <div class="card">🛍️ <span>Tas Kain</span></div>
-    <div class="card">📢 <span>Edukasi</span></div>
-  </div>
+<div class="grid">
+<div class="card">🗑️ Buang Sampah Benar</div>
+<div class="card">♻️ Daur Ulang</div>
+<div class="card">🧹 Kerja Bakti</div>
+<div class="card">🥤 Kurangi Plastik</div>
+<div class="card">🛍️ Tas Kain</div>
+<div class="card">📢 Edukasi</div>
+</div>
 </section>
 
-<!-- STATISTIK -->
 <section id="statistik" class="hidden">
-  <div class="section-title"><h2>Statistik</h2></div>
+<div class="section-title">
+<h2>Statistik</h2>
+</div>
 
-  <div class="stats-container">
-    <div class="stats-item">
-      <p>Sungai Bersih 41%</p>
-      <div class="progress"><div class="fill fill1"></div></div>
-    </div>
+<div class="stats-container">
 
-    <div class="stats-item">
-      <p>Pengelolaan 35%</p>
-      <div class="progress"><div class="fill fill2"></div></div>
-    </div>
+<div class="stats-item">
+<p>Sungai Bersih 41%</p>
+<div class="progress">
+<div class="fill fill1"></div>
+</div>
+</div>
 
-    <div class="stats-item">
-      <p>Kesadaran 52%</p>
-      <div class="progress"><div class="fill fill3"></div></div>
-    </div>
-  </div>
-</section>
-<!-- DIAGRAM -->
-<section id="tren" class="hidden">
+<div class="stats-item">
+<p>Pengelolaan 35%</p>
+<div class="progress">
+<div class="fill fill2"></div>
+</div>
+</div>
 
-  <div class="section-title">
-    <h2>Tren Sampah Indonesia</h2>
-    <p>2020–2025 (KLHK + proyeksi)</p>
-  </div>
+<div class="stats-item">
+<p>Kesadaran 52%</p>
+<div class="progress">
+<div class="fill fill3"></div>
+</div>
+</div>
 
-  <div class="bar-chart">
-
-    <div class="bar-item">
-      <div class="bar" data-h="67"></div>
-      <span>2020<br>67 jt</span>
-    </div>
-
-    <div class="bar-item">
-      <div class="bar" data-h="68"></div>
-      <span>2021<br>68 jt</span>
-    </div>
-
-    <div class="bar-item">
-      <div class="bar" data-h="70"></div>
-      <span>2022<br>70 jt</span>
-    </div>
-
-    <div class="bar-item">
-      <div class="bar" data-h="72"></div>
-      <span>2023<br>72 jt</span>
-    </div>
-
-    <div class="bar-item">
-      <div class="bar" data-h="73"></div>
-      <span>2024<br>73 jt</span>
-    </div>
-
-    <div class="bar-item">
-      <div class="bar" data-h="75"></div>
-      <span>2025<br>75 jt</span>
-    </div>
-
-  </div>
-
+</div>
 </section>
 
-<!-- TIMELINE -->
+<div id="monitor" class="monitor-box hidden">
+
+<div class="monitor-label">Tingkat Dampak Lingkungan</div>
+
+<h1 id="monitorValue">0%</h1>
+
+<div class="monitor-bar">
+<div class="monitor-fill"></div>
+</div>
+
+<div class="monitor-desc">
+Data menunjukkan peningkatan dampak akibat sampah yang tidak terkelola dengan baik.
+</div>
+
+</div>
+
 <section id="timeline" class="hidden">
 
-  <div class="section-title">
-    <h2>Jika Kita Terus Diam...</h2>
-    <p>Masa depan lingkungan Indonesia</p>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="year">2026</div>
-      <div class="timeline-content">
-        Sungai semakin dipenuhi sampah plastik.
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="year">2030</div>
-      <div class="timeline-content">
-        Risiko banjir meningkat akibat saluran tersumbat.
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="year">2040</div>
-      <div class="timeline-content">
-        Laut Indonesia semakin tercemar mikroplastik.
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="year">2050</div>
-      <div class="timeline-content">
-        Hewan laut dan ekosistem semakin terancam.
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- MONITOR -->
-<div id="monitor" class="monitor-box">
-
-  <div class="monitor-label">Tingkat Dampak Lingkungan</div>
-
-  <h1 id="monitorValue">0%</h1>
-
-  <div class="monitor-bar">
-    <div class="monitor-fill"></div>
-  </div>
-
-  <div class="monitor-desc">
-    Data menunjukkan peningkatan dampak akibat sampah yang tidak terkelola dengan baik.
-  </div>
-
+<div class="section-title">
+<h2>Jika Kita Terus Diam...</h2>
+<p>Masa depan lingkungan Indonesia</p>
 </div>
 
-<!-- QUIZ -->
-<section id="quiz" class="hidden">
+<div class="timeline">
 
-  <div class="section-title">
-    <h2>Quiz Edukasi Sampah</h2>
-    <p>Jawab satu per satu dan uji pemahamanmu</p>
-  </div>
+<div class="timeline-item">
+<div class="year">2026</div>
+<div class="timeline-content">
+Sungai semakin dipenuhi sampah plastik.
+</div>
+</div>
 
-  <div class="quiz-box">
+<div class="timeline-item">
+<div class="year">2030</div>
+<div class="timeline-content">
+Risiko banjir meningkat akibat saluran tersumbat.
+</div>
+</div>
 
-    <div id="progress">Soal 1 / 5</div>
+<div class="timeline-item">
+<div class="year">2040</div>
+<div class="timeline-content">
+Laut Indonesia semakin tercemar mikroplastik.
+</div>
+</div>
 
-    <div id="question" class="quiz-question"></div>
+<div class="timeline-item">
+<div class="year">2050</div>
+<div class="timeline-content">
+Hewan laut dan ekosistem semakin terancam.
+</div>
+</div>
 
-    <div id="options" class="quiz-options"></div>
-
-    <div id="feedback"></div>
-
-    <button id="nextBtn" style="display:none;">Soal Berikutnya</button>
-
-    <div class="score">
-      Skor: <span id="quizScore">0</span>
-    </div>
-
-  </div>
-
+</div>
 </section>
 
-<!-- GAME -->
+<section id="quiz" class="hidden">
+
+<div class="section-title">
+<h2>Quiz Edukasi Sampah</h2>
+</div>
+
+<div class="quiz-box">
+
+<div id="progress">Soal 1 / 5</div>
+
+<div id="question" class="quiz-question"></div>
+
+<div id="options" class="quiz-options"></div>
+
+<div id="feedback"></div>
+
+<button id="nextBtn" style="display:none;">
+Soal Berikutnya
+</button>
+
+<div class="score">
+Skor: <span id="quizScore">0</span>
+</div>
+
+</div>
+</section>
 
 <section id="game" class="hidden">
 
-  <div class="section-title">
-    <h2>Mini Game Pilah Sampah</h2>
-    <p>Masukkan sampah ke tempat yang benar</p>
-  </div>
+<div class="section-title">
+<h2>Mini Game Pilah Sampah</h2>
+<p>Masukkan sampah ke tempat yang benar</p>
+</div>
 
-  <div class="game-area">
+<div class="game-area">
 
-    <div class="trash organik" draggable="true" style="top:40px;left:60px;">🍌</div>
+<div class="trash organik" draggable="true" style="top:40px;left:60px;">🍌</div>
+<div class="trash organik" draggable="true" style="top:150px;left:180px;">🍃</div>
+<div class="trash anorganik" draggable="true" style="top:90px;left:520px;">🧴</div>
+<div class="trash anorganik" draggable="true" style="top:220px;left:650px;">🥤</div>
 
-    <div class="trash organik" draggable="true" style="top:150px;left:180px;">🍃</div>
+<div class="bin organik-bin" id="organikBin">
+🟢
+<span>Organik</span>
+</div>
 
-    <div class="trash organik" draggable="true" style="top:280px;left:120px;">🍎</div>
+<div class="bin anorganik-bin" id="anorganikBin">
+🔵
+<span>Anorganik</span>
+</div>
 
-    <div class="trash anorganik" draggable="true" style="top:90px;left:520px;">🧴</div>
+</div>
 
-    <div class="trash anorganik" draggable="true" style="top:220px;left:650px;">🥤</div>
-
-    <div class="trash anorganik" draggable="true" style="top:340px;left:450px;">🥫</div>
-
-    <div class="bin organik-bin" id="organikBin">
-      🟢
-      <span>Organik</span>
-    </div>
-
-    <div class="bin anorganik-bin" id="anorganikBin">
-      🔵
-      <span>Anorganik</span>
-    </div>
-
-  </div>
-
-  <div class="score">
-    Skor: <span id="score">0</span>
-  </div>
+<div class="score">
+Skor: <span id="score">0</span>
+</div>
 
 </section>
 
-<section id="uu" class="hidden">
-
-  <div class="section-title">
-    <h2>Dasar Hukum & Sanksi</h2>
-    <p>Pengendalian sampah di Indonesia diatur dalam hukum resmi</p>
-  </div>
-
-  <div class="grid">
-
-    <!-- UU -->
-    <div class="card">
-      <h3>UU No. 18 Tahun 2008</h3>
-      <p>
-        Tentang Pengelolaan Sampah. Mengatur kewajiban setiap warga dalam menjaga dan mengelola sampah secara bertanggung jawab.
-      </p>
-    </div>
-
-    <!-- PASAL -->
-    <div class="card">
-      <h3>Pasal 29</h3>
-      <p>
-        Setiap orang dilarang membuang sampah tidak pada tempat yang telah ditentukan atau disediakan.
-      </p>
-    </div>
-
-    <!-- SANKSI ADMIN -->
-    <div class="card">
-      <h3>Sanksi Administratif</h3>
-      <p>
-        Teguran tertulis, paksaan pemerintah daerah, hingga denda administratif bagi pelanggar.
-      </p>
-    </div>
-
-    <!-- SANKSI PERDATA -->
-    <div class="card">
-      <h3>Sanksi Perdata</h3>
-      <p>
-        Pelaku dapat diminta mengganti kerugian akibat kerusakan lingkungan yang ditimbulkan.
-      </p>
-    </div>
-
-    <!-- SANKSI PIDANA -->
-    <div class="card">
-      <h3>Sanksi Pidana</h3>
-      <p>
-        Berdasarkan UU No. 18 Tahun 2008, pelanggar dapat dikenai denda dan/atau pidana kurungan sesuai keputusan pengadilan.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-<!-- INVENTOR -->
 <section id="inventor" class="hidden">
 
-  <div class="section-title">
-    <h2>Tim Pengembang</h2>
-    <p>Kolaborasi setara dalam kampanye pengendalian sosial</p>
-  </div>
+<div class="section-title">
+<h2>Tim Pengembang</h2>
+<p>Kolaborasi kampanye sosial</p>
+</div>
 
-  <div class="inventor-box">
+<div class="inventor-box">
 
-    <div class="inventor-card">
-      <div class="avatar">AJ</div>
-      <h3>Abdurrafi Jerryco</h3>
-      <p>Konsep & Ide Kampanye</p>
-    </div>
+<div class="inventor-card">
+<div class="avatar">AJ</div>
+<h3>Abdurrafi Jerryco</h3>
+<p>Konsep & Ide Kampanye</p>
+</div>
 
-    <div class="inventor-card">
-      <div class="avatar">AR</div>
-      <h3>Aldeandra Rasya</h3>
-      <p>Desain & Tampilan Web</p>
-    </div>
+<div class="inventor-card">
+<div class="avatar">AR</div>
+<h3>Aldeandra Rasya</h3>
+<p>Desain & Tampilan Web</p>
+</div>
 
-    <div class="inventor-card">
-      <div class="avatar">CA</div>
-      <h3>Cahyo Jatmiko</h3>
-      <p>Data & Materi Edukasi</p>
-    </div>
+<div class="inventor-card">
+<div class="avatar">CA</div>
+<h3>Cahyo Jatmiko</h3>
+<p>Data & Materi Edukasi</p>
+</div>
 
-    <div class="inventor-card">
-      <div class="avatar">MA</div>
-      <h3>Muhammad Abimanyu</h3>
-      <p>Pengembangan & Interaksi</p>
-    </div>
+<div class="inventor-card">
+<div class="avatar">MA</div>
+<h3>Muhammad Abimanyu</h3>
+<p>Pengembangan & Interaksi</p>
+</div>
 
-  </div>
-
+</div>
 </section>
+
+<script>
+/* TYPING */
+const text = "Lingkungan bersih dimulai dari kebiasaan kecil.";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,60);
+}
+}
+typing();
+
+/* SCROLL ANIMATION */
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+/* STAT BAR */
+const statSection = document.querySelector("#statistik");
+
+const statObserver = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+
+document.querySelector(".fill1").style.width = "41%";
+document.querySelector(".fill2").style.width = "35%";
+document.querySelector(".fill3").style.width = "52%";
+
+}
+});
+});
+
+if(statSection){
+statObserver.observe(statSection);
+}
+
+/* MONITOR */
+const monitorSection = document.querySelector("#monitor");
+
+const monitorObserver = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const target = 89;
+const duration = 1400;
+
+const fill = document.querySelector(".monitor-fill");
+const value = document.querySelector("#monitorValue");
+
+let start = null;
+
+function animate(t){
+
+if(!start) start = t;
+
+const progress = (t - start) / duration;
+const eased = Math.min(progress,1);
+
+const current = Math.floor(eased * target);
+
+fill.style.width = current + "%";
+value.innerText = current + "%";
+
+if(eased < 1){
+requestAnimationFrame(animate);
+}
+
+}
+
+requestAnimationFrame(animate);
+
+}
+
+});
+},{threshold:0.4});
+
+if(monitorSection){
+monitorObserver.observe(monitorSection);
+}
+
+/* QUIZ */
+const questions = [
+{
+q:"Apa dampak utama membuang sampah sembarangan?",
+options:["Lingkungan bersih","Banjir dan penyakit","Tanah subur","Udara segar"],
+answer:1
+},
+{
+q:"Sampah organik contohnya adalah...",
+options:["Botol plastik","Kulit pisang","Kaleng","Kaca"],
+answer:1
+},
+{
+q:"UU pengelolaan sampah di Indonesia adalah...",
+options:["UU No.18 Tahun 2008","UU No.5 Tahun 1990","UU No.1 Tahun 1945","UU No.20 Tahun 2003"],
+answer:0
+}
+];
+
+let index = 0;
+let quizScore = 0;
+
+const qEl = document.getElementById("question");
+const optEl = document.getElementById("options");
+const feedback = document.getElementById("feedback");
+const nextBtn = document.getElementById("nextBtn");
+const progress = document.getElementById("progress");
+
+function loadQuiz(){
+
+const q = questions[index];
+
+progress.innerText = `Soal ${index+1} / ${questions.length}`;
+
+qEl.innerText = q.q;
+optEl.innerHTML = "";
+feedback.innerText = "";
+nextBtn.style.display = "none";
+
+q.options.forEach((opt,i)=>{
+
+const btn = document.createElement("button");
+btn.innerText = opt;
+
+btn.onclick = ()=>{
+
+if(i === q.answer){
+feedback.innerText = "✔ Benar!";
+quizScore++;
+}else{
+feedback.innerText = "✖ Salah!";
+}
+
+document.getElementById("quizScore").innerText = quizScore;
+nextBtn.style.display = "inline-block";
+
+};
+
+optEl.appendChild(btn);
+
+});
+
+}
+
+nextBtn.onclick = ()=>{
+
+index++;
+
+if(index < questions.length){
+loadQuiz();
+}else{
+qEl.innerText = "Quiz selesai!";
+optEl.innerHTML = "";
+feedback.innerText = `Skor akhir: ${quizScore}/${questions.length}`;
+nextBtn.style.display = "none";
+progress.innerText = "";
+}
+
+};
+
+loadQuiz();
+
+/* GAME */
+const trashItems = document.querySelectorAll(".trash");
+const organikBin = document.getElementById("organikBin");
+const anorganikBin = document.getElementById("anorganikBin");
+
+let score = 0;
+
+function updateScore(v){
+score += v;
+document.getElementById("score").innerText = score;
+}
+
+trashItems.forEach(item=>{
+
+item.addEventListener("dragstart",(e)=>{
+window.draggedItem = item;
+});
+
+});
+
+[organikBin, anorganikBin].forEach(bin=>{
+
+bin.addEventListener("dragover",(e)=>{
+e.preventDefault();
+});
+
+bin.addEventListener("drop",(e)=>{
+
+e.preventDefault();
+
+const item = window.draggedItem;
+
+if(!item) return;
+
+const isOrganik = item.classList.contains("organik");
+const isAnorganik = item.classList.contains("anorganik");
+
+if(
+(bin.id === "organikBin" && isOrganik) ||
+(bin.id === "anorganikBin" && isAnorganik)
+){
+updateScore(1);
+}else{
+updateScore(-1);
+}
+
+item.remove();
+window.draggedItem = null;
+
+});
+
+});
+
+/* DEVICE DETECT */
+function detectDevice(){
+
+const width = window.innerWidth;
+
+let device = "desktop";
+
+if(width <= 480){
+device = "mobile";
+}
+else if(width <= 820){
+device = "tablet";
+}
+
+document.body.setAttribute("data-device",device);
+
+}
+
+window.addEventListener("load",detectDevice);
+window.addEventListener("resize",detectDevice);
+</script>
+
+</body>
+</html>
