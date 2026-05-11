@@ -1257,3 +1257,141 @@ background:radial-gradient(circle at center, rgba(0,255,150,0.18), #050816);
 .active{
 opacity:1;
 }
+
+
+/* =========================
+   GLOBAL RESET
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Outfit', sans-serif;
+  background: linear-gradient(-45deg, #050816, #0b1a2e, #1a0f2b, #061c1a);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease infinite;
+  color:white;
+  overflow-x:hidden;
+  line-height:1.7;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* =========================
+   BRAND HEADER
+========================= */
+
+/* =========================
+   BRAND HEADER (FINAL SAFE)
+========================= */
+
+.brand-header{
+  text-align:center;
+  padding:120px 20px 60px;
+  position:relative;
+}
+
+/* tag kecil */
+.brand-tag{
+  display:inline-block;
+  padding:6px 14px;
+  font-size:12px;
+  letter-spacing:2px;
+  color:#00d4ff;
+  border:1px solid rgba(0,212,255,0.3);
+  border-radius:50px;
+  background:rgba(0,212,255,0.05);
+  backdrop-filter:blur(10px);
+  margin-bottom:18px;
+}
+
+/* judul */
+.brand-title{
+  font-size:90px;
+  font-weight:900;
+  letter-spacing:6px;
+
+  background:linear-gradient(90deg,#ffffff,#00d4ff,#00ffa3);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* animasi saat masuk */
+.brand-header.animate{
+  animation:brandEnter 0.8s ease forwards;
+}
+
+@keyframes brandEnter{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* =========================
+   LAYOUT RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 1024px){
+  .brand-title{font-size:70px;}
+  section{padding:60px 6%;}
+}
+
+/* IPAD */
+@media (max-width: 820px){
+  .hero-container{flex-direction:column;}
+  .brand-title{font-size:60px;}
+  nav{width:95%;}
+}
+
+/* MOBILE */
+@media (max-width: 480px){
+  .brand-title{
+    font-size:42px;
+    letter-spacing:3px;
+  }
+
+  .section-title h2{
+    font-size:32px;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  nav ul{
+    gap:8px;
+    font-size:12px;
+  }
+}
+
+/* =========================
+   DEVICE ATTRIBUTE STYLING
+========================= */
+body[data-device="mobile"] .brand-title{
+  font-size:42px;
+}
+
+body[data-device="tablet"] .brand-title{
+  font-size:60px;
+}
+
+body[data-device="desktop"] .brand-title{
+  font-size:90px;
+}

@@ -425,3 +425,48 @@ const brandObserver = new IntersectionObserver((entries)=>{
 if(brandHeader){
   brandObserver.observe(brandHeader);
 }
+
+
+/* =========================
+   DEVICE DETECTION (SAFE)
+========================= */
+function detectDevice(){
+  const width = window.innerWidth;
+
+  let device = "desktop";
+
+  if(width <= 480){
+    device = "mobile";
+  } 
+  else if(width <= 820){
+    device = "tablet";
+  } 
+  else if(width <= 1024){
+    device = "small-laptop";
+  }
+
+  document.body.setAttribute("data-device", device);
+}
+
+window.addEventListener("load", detectDevice);
+window.addEventListener("resize", detectDevice);
+
+/* =========================
+   SAFE BRAND ANIMATION
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const brandHeader = document.querySelector(".brand-header");
+
+  // kalau tidak ada → STOP (biar tidak error)
+  if(!brandHeader) return;
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        brandHeader.classList.add("animate");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(brandHeader);
+});
